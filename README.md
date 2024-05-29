@@ -1,2 +1,3 @@
 # LeetCode
-Leet Code
+New Hobby
+
