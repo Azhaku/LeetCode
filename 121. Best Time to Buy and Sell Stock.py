@@ -24,14 +24,12 @@
 #         cur_max = 0
 #         max_profit = 0
 #         for i in prices[1:]:
-#             if cur_min >= i:
+#             if cur_min > i:
 #                 cur_min = i
 #                 cur_max = 0
 #             elif cur_min < i:
 #                 if cur_max < i:
 #                     cur_max = i
-#             else:
-#                 return 0
 #             if cur_max > 0:
 #                 new_max_profit = cur_max - cur_min
 #                 if max_profit < new_max_profit:
@@ -47,14 +45,13 @@ class Solution(object):
         selling_price = 0
         max_profit = 0
         for i in prices[1:]:
-            if buying_price >= i:
+            if buying_price > i:
                 buying_price = i
                 selling_price = 0
             elif buying_price < i:
                 if selling_price < i:
                     selling_price = i
-            else:
-                return 0
+
 
             if selling_price > 0:
                 today_s_profit = selling_price - buying_price
