@@ -69,7 +69,7 @@ class Solution(object):
 prices = [7,1,5,3,6,4] #result 5
 # # sample test cases
 # 5,2,2,2,4   //2
-# 5,1,4,2,7   //5
+# 5,1,4,2,7   //6
 # 7,6,4,3,1   //0
 s = Solution()
 print(s.maxProfit(prices))
