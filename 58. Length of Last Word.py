@@ -30,21 +30,23 @@
 # There will be at least one word in s.
 
 # method 1:
-class Solution(object):
-   def lengthOfLastWord(self, s):
-       return len(s.strip().split()[-1])
+# class Solution(object):
+#    def lengthOfLastWord(self, s):
+#        return len(s.strip().split()[-1])
     
 # method 2:
-# class Solution(object):
-#     def lengthOfLastWord(self, s):
-#         count = 0
-#         for i in reversed(s):
-#             if(i != " "):
-#                 count += 1
-#             else:
-#                 if count>0:
-#                     return count
-#         return count
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        count = 0
+        for i in reversed(s):
+#         for i in range(len(s)-1,-1,-1):
+            if(i != " "):
+                count += 1
+            else:
+                if count>0:
+                    return count
+        return count
+
     
 s = Solution()
-print(s.lengthOfLastWord("Hi my dear child    "))
+print(s.lengthOfLastWord("a"))
