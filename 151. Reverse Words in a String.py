@@ -48,41 +48,38 @@ class Solution(object):
 s = Solution()
 # print(s.reverseWords("I am here"))  
 # method -2(two pointer) O(n*m)-time[m-half(no.of chars)], space-O(1)
-def reverse_words(s):
-    left = 0
-    i = 0
-    s = list(" ".join(s.strip().split()))
-    n = len(s)
-    print(s)
-      
-    while(s[i] == ' '):
-        i = i+1
-    
-    left = i
-     
-    while(i < n):
-        if(i+1 == n or s[i] == ' '):
-            right = i-1
-            if i+1 == n:
-                right = right+1
-            # print(j)
-             
-            while left < right:
-                s[left], s[right] = s[right], s[left]
-                left = left+1
-                right = right-1
-             
-            left = i + 1
-        
-         
-        if(i > left and s[left] == ' '):
-            print(i)
-            left = i
-         
-        i = i+1
-    s = ''.join(s)
-    s = s[::-1]
-    return s
- 
-s = "    here am    i   "
-print(reverse_words(s))
+class Solution(object):
+    def reverseWords(self, s):
+        current = 0
+        left = 0
+        right = 0
+        s = list(s)
+        n = len(s)
+        i = 0
+        def rever(s,start,end):
+            while start < end:
+                s[start], s[end] = s[end], s[start]
+                start += 1
+                end -= 1
+
+        while i<n:
+            while (i<n and s[i]== ' '):
+                i += 1
+            if i==n:
+                break
+            cur = i 
+            while (i<n and s[i]!= ' '):
+                s[right] = s[i]
+                i +=1
+                right +=1
+            rever(s,left,right-1)
+            if right<n:
+                s[right] = " "
+            right +=1
+            left = right
+            i+=1
+        s = "".join(s[:right-1][::-1])
+        return s
+s = "the sky is blue"
+s1 = Solution()
+print(s1.reverseWords(s))
