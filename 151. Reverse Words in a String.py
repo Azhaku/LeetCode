@@ -50,7 +50,6 @@ s = Solution()
 # method -2(two pointer) O(n*m)-time[m-half(no.of chars)], space-O(1)
 class Solution(object):
     def reverseWords(self, s):
-        current = 0
         left = 0
         right = 0
         s = list(s)
@@ -67,7 +66,6 @@ class Solution(object):
                 i += 1
             if i==n:
                 break
-            cur = i 
             while (i<n and s[i]!= ' '):
                 s[right] = s[i]
                 i +=1
