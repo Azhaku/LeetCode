@@ -32,26 +32,19 @@
 # numbers is sorted in non-decreasing order.
 # -1000 <= target <= 1000
 # The tests are generated such that there is exactly one solution.
-from typing import List
-class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        def binarySearch(l, r, target):
-            while l <= r:
-                m = (l + r)//2
-                if numbers[m] == target:
-                    return m
-                elif numbers[m] < target:
-                    l = m + 1
-                else:
-                    r = m - 1
-            return -1
+class Solution(object):
+    def twoSum(self, numbers, target):
+        l = 0
+        r = len(numbers)-1
+        while l<r:
+            s = numbers[l] + numbers[r] 
+            if s== target:
+                return [l+1,r+1]
+            elif s > target:
+                r -=1
+            else:
+                l+=1
         
-        for left, num in enumerate(numbers):
-            right = binarySearch(left + 1, len(numbers)-1, target - num)
-            if right != -1:
-                return [left + 1, right + 1]
-
-
 
 
 
