@@ -49,3 +49,18 @@ New Hobby
 [28. Find the Index of the First Occurrence in a String](https://github.com/Azhaku/LeetCode/blob/main/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String.py)
 
 [68. Text Justification](https://github.com/Azhaku/LeetCode/blob/main/68.%20Text%20Justification.py)
+
+## Two Pointers
+[125. Valid Palindrome](https://github.com/Azhaku/LeetCode/blob/main/125.%20Valid%20Palindrome.py)
+
+
+[392. Is Subsequence](https://github.com/Azhaku/LeetCode/blob/main/392.%20Is%20Subsequence.py)
+
+
+[167. Two Sum II - Input Array Is Sorted](https://github.com/Azhaku/LeetCode/blob/main/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.py)
+
+
+[11. Container With Most Water](https://github.com/Azhaku/LeetCode/blob/main/11.%20Container%20With%20Most%20Water.py)
+
+
+[15. 3Sum](https://github.com/Azhaku/LeetCode/blob/main/15.%203Sum.py)
