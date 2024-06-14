@@ -1,7 +1,7 @@
 # LeetCode
 New Hobby
 
-[88. Merge Sorted Array] (https://github.com/Azhaku/LeetCode/blob/main/88.%20Merge%20Sorted%20Array.py)
+[88. Merge Sorted Array](https://github.com/Azhaku/LeetCode/blob/main/88.%20Merge%20Sorted%20Array.py)
    
 
 27. Remove Element
