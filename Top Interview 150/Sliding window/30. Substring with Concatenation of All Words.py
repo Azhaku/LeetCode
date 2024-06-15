@@ -144,4 +144,4 @@ class Solution(object):
                     left = j+l
                     subdic = {}
                     count = 0
-        return res          
+        return res
