@@ -63,4 +63,4 @@ class Solution(object):
 s = "anagram"
 t = "nagaram" 
 S = Solution()
-S.isAnagram(s,t)
+print(S.isAnagram(s,t))
