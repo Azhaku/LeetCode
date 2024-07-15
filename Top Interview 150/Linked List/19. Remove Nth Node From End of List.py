@@ -78,7 +78,7 @@ class Solution(object):
         return dummy.next
     
     
-# fully optimized
+# fully optimized: beats 100% python runtime
 class Solution(object):
     def removeNthFromEnd(self, head, n):
         fn = head
