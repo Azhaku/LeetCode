@@ -36,6 +36,7 @@ class Solution(object):
         if not root:
             return 0
         return  1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
+        # return  1 + min(self.maxDepth(root.left),self.maxDepth(root.right))  # Minimum depth of a binary tree
      
         # Visiting Node with value: 3
         # Visiting Node with value: 9
@@ -70,6 +71,9 @@ class Solution1(object):
                 if node.right:
                     # debug_q.append(node.right.val)
                     q.append(node.right)
+                # for finding minimum depth
+                # if not node.right and not node.left:
+                #     return level + 1
             # print(debug_q)
             level += 1
         return level
@@ -80,16 +84,19 @@ class Solution2(object):
     def maxDepth(self,r):
         stack = [[r,1]]
         res = 0
-        
+        m_depth = float('inf')
         while stack:
             node,depth = stack.pop()
             # print(node,depth,node.val if node else None)
-            
+
             if node:
+                # for minimum depth
+                # if not node.left and not node.right:
+                #     m_depth = min(depth,m_depth)
                 res = max(res, depth)
                 stack.append([node.left, depth+1])
                 stack.append([node.right, depth+1])
-        return res
+        return [res,m_depth]
 
 #create binary tree
 # [3,9,None,None,20,15,7]
@@ -97,6 +104,8 @@ t = TreeNode(3)
 td = t
 td.right = TreeNode(9)
 td.left = TreeNode(20)
+# td.left.right = TreeNode(22)
+# td.left.left = TreeNode(21)
 td = td.right
 td.right = TreeNode(15)
 td.left = TreeNode(7)
