@@ -63,15 +63,15 @@ The number of nodes in both trees is in the range [0, 100].
 # using dfs
 class Solution(object):
     def isSameTree(self, p, q):
-        queue = [[p,q]]
-        while queue:
-            dp,dq = queue.pop()
+        stack = [[p,q]]
+        while stack:
+            dp,dq = stack.pop()
             if not dp and not dq:
                 continue
             if not dp or not dq or dp.val != dq.val:
                 return 0
-            queue.append([dp.left,dq.left])
-            queue.append([dp.right,dq.right])
-            print(queue)
+            stack.append([dp.left,dq.left])
+            stack.append([dp.right,dq.right])
+            print(stack)
 
         return 1
